@@ -6,11 +6,10 @@ var sass = require('gulp-sass');
 gulp.task('sass', function(){
   return gulp.src('src/sass/tomb-ui.scss')
     .pipe(sass()) // Converts Sass to CSS with gulp-sass
-    .pipe(gulp.dest('dist/css'))
+    .pipe(gulp.dest('dist/css'));
 });
 
 // watches the SCSS files and then recompiles changes
 gulp.task('watch', function() {
 	gulp.watch('src/sass/**/*.scss', ['sass']);
-	gulp.watch('src/sass/tomb-ui.scss', ['sass']);
 });
