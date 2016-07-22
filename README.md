@@ -1,2 +1,2 @@
-# tomb-ui
-A dark-ish UI kit for the Sepulchre Software site
+# Tomb UI
+A UI kit for the Sepulchre Software site and related products
