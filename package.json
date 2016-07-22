@@ -1,0 +1,24 @@
+{
+  "name": "tomb-ui",
+  "version": "0.1.0",
+  "description": "A UI kit for the Sepulchre Software site and related products",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sepulchresoftware/tomb-ui.git"
+  },
+  "keywords": [
+    "sepulchre",
+    "software",
+    "tomb",
+    "ui"
+  ],
+  "author": "Matthew Fritz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sepulchresoftware/tomb-ui/issues"
+  },
+  "homepage": "https://github.com/sepulchresoftware/tomb-ui#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
