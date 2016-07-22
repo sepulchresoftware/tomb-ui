@@ -10,7 +10,10 @@
     "sepulchre",
     "software",
     "tomb",
-    "ui"
+    "ui",
+    "ui kit",
+    "framework",
+    "web"
   ],
   "author": "Matthew Fritz",
   "license": "MIT",
