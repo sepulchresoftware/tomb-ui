@@ -1,6 +1,25 @@
 // VARIABLES
 
-// COLORS
-$black: "#000";
-$red: "#ff0000";
-$white: "#fff";
+// COLORS (BACKGROUNDS)
+$bg-danger: "#ff6666";  // danger: light red
+$bg-success: "#66ff66"; // success: light green
+$bg-info: "#66ffff";    // info: light blue
+$bg-warning: "#ffa366"; // warning: light orange
+$bg-primary: "#009900"; // primary: dark green
+
+// COLORS (FOREGROUNDS)
+$fg-danger: "#000";     // danger: black
+$fg-success: "#000";    // success: black
+$fg-info: "#000";       // info: black
+$fg-warning: "#000";    // warning: black
+$fg-primary: "#fff";    // primary: white
+
+// SCREEN WIDTH VARIABLES
+$screen-xlarge: 1200px;
+$screen-large: 992px;
+$screen-medium: 768px;
+$screen-small: 544px;
+$screen-xsmall: 0px;
+
+// GRID VARIABLES
+$max-columns: 12;

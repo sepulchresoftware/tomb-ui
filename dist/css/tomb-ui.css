@@ -1,3 +1,5 @@
+/*! tomb-ui.css | MIT License | github.com/sepulchresoftware/tomb-ui */
+/*! A UI kit for the Sepulchre Software site and related products */
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -367,3 +369,17 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
+
+/* ------------------------------------- */
+/* Styles specific to Tomb UI begin here */
+/* ------------------------------------- */
+/* Only display the marked content for a screen-reader */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin-left: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }

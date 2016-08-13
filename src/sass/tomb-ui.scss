@@ -1,8 +1,17 @@
 // TOMB UI
 // SEPULCHRE SOFTWARE
+/*! tomb-ui.css | MIT License | github.com/sepulchresoftware/tomb-ui */
+/*! A UI kit for the Sepulchre Software site and related products */
 
+// Resets (normalize); start the framework off right
+@import "normalize";
+
+/* ------------------------------------- */
+/* Styles specific to Tomb UI begin here */
+/* ------------------------------------- */
 // Common files
 @import "variables";
+@import "utilities";
 
-// Resets (normalize)
-@import "normalize";
+// Reusable components for Tomb UI
+@import "components/grid";
