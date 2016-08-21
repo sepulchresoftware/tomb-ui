@@ -8,16 +8,17 @@ $version: "0.1.0";
 /*! A UI kit for the Sepulchre Software site and related products */
 
 // Resets (normalize); start the framework off right
-@import "normalize";
+@import "common/normalize";
 
 /* ------------------------------------- */
 /* Styles specific to Tomb UI begin here */
 /* ------------------------------------- */
 
 // Common files
-@import "variables";
-@import "functions";
-@import "utilities";
+@import "common/variables";
+@import "common/colors";
+@import "common/functions";
+@import "common/utilities";
 
 // Reusable components for Tomb UI
 @import "components/grid";
