@@ -10,9 +10,21 @@
 // @param string $size The size constant to add to each class
 //
 @mixin make-column($col-num, $max-cols, $prefix, $size) {
+	$calculation: $col-num / $max-cols * 100%;
+
 	// outputs something like .col-xl-2
 	.#{$prefix}-#{$size}-#{$col-num} {
-		width: $col-num / $max-cols * 100%
+		// if the string does NOT contain "-offset" we will set the width
+		// of the column; otherwise, we will set its left margin
+		@if str-index($size, "-offset") == null { 
+			width: $calculation;
+		}
+		@else {
+			margin-left: $calculation;
+		}
+
+		// we want to float columns and offsets regardless
+		float:left;
 	}
 }
 
@@ -25,6 +37,6 @@
 @mixin make-columns($max-cols, $size) {
 	@for $col from 1 through $max-cols {
 		@include make-column($col, $max-cols, "col", $size)
-		@include make-column($col, $max-cols, "offset", $size)
+		@include make-column($col, $max-cols, "col", "#{$size}-offset")
 	}
 }

@@ -1,7 +1,7 @@
 // GRID SYSTEM
-.container {
-	margin-left: auto;
-	margin-right: auto;
+.container, .container-fluid {
+	/* clearfix hack: prevent floated elements from going outside the container */
+	overflow:auto;
 
 	// .container .row
 	.row {
@@ -9,32 +9,20 @@
 	}
 }
 
-// Responsive rules for the grid
-@media only screen and (min-width: $screen-xlarge) {
-	.container {
-		width: $screen-xlarge;
-	}
-
-	// generate the col-xl-* and offset-xl-* columns
-	@include make-columns($max-columns, "xl")
+.container-fluid {
+	// container-fluid takes up the entire viewport
+	width:100%;
 }
 
-@media only screen and (min-width: $screen-large) {
+// Responsive rules for the grid; media queries should be done from smallest
+// size to largest size to ensure the rules order properly
+@media only screen and (min-width: $screen-xsmall) {
 	.container {
-		width: $screen-large;
+		width: 100%;
 	}
 
-	// generate the col-lg-* and offset-lg-* columns
-	@include make-columns($max-columns, "lg")
-}
-
-@media only screen and (min-width: $screen-medium) {
-	.container {
-		width: $screen-medium;
-	}
-
-	// generate the col-md-* and offset-md-* columns
-	@include make-columns($max-columns, "md")
+	// generate the col-xs-* and offset-xs-* columns
+	@include make-columns($max-columns, "xs")
 }
 
 @media only screen and (min-width: $screen-small) {
@@ -46,11 +34,29 @@
 	@include make-columns($max-columns, "sm")
 }
 
-@media only screen and (min-width: $screen-xsmall) {
+@media only screen and (min-width: $screen-medium) {
 	.container {
-		width: 100%;
+		width: $screen-medium;
 	}
 
-	// generate the col-xs-* and offset-xs-* columns
-	@include make-columns($max-columns, "xs")
+	// generate the col-md-* and offset-md-* columns
+	@include make-columns($max-columns, "md")
+}
+
+@media only screen and (min-width: $screen-large) {
+	.container {
+		width: $screen-large;
+	}
+
+	// generate the col-lg-* and offset-lg-* columns
+	@include make-columns($max-columns, "lg")
+}
+
+@media only screen and (min-width: $screen-xlarge) {
+	.container {
+		width: $screen-xlarge;
+	}
+
+	// generate the col-xl-* and offset-xl-* columns
+	@include make-columns($max-columns, "xl")
 }

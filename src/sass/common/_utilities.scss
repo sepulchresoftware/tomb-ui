@@ -11,3 +11,9 @@
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
+
+/* Center a container based on its sizing */
+.container-centered {
+	margin-left:auto;
+	margin-right:auto;
+}
