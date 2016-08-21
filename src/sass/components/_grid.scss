@@ -24,7 +24,7 @@
 		width: $screen-large;
 	}
 
-	// generate the col-l-* and offset-l-* columns
+	// generate the col-lg-* and offset-lg-* columns
 	@include make-columns($max-columns, "lg")
 }
 
@@ -33,7 +33,7 @@
 		width: $screen-medium;
 	}
 
-	// generate the col-m-* and offset-m-* columns
+	// generate the col-md-* and offset-md-* columns
 	@include make-columns($max-columns, "md")
 }
 
@@ -42,7 +42,7 @@
 		width: $screen-small;
 	}
 
-	// generate the col-s-* and offset-s-* columns
+	// generate the col-sm-* and offset-sm-* columns
 	@include make-columns($max-columns, "sm")
 }
 
