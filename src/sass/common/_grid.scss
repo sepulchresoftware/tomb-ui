@@ -1,0 +1,46 @@
+// GRID
+
+// VARIABLES
+$max-columns: 12;
+$grid-margin: 10px;
+
+// Makes the column properties for the given column number out of the maximum
+// number of columns. It also allows for a prefix ("col" or "offset") and a
+// size ("xl", "l", "m", "s", "xs").
+//
+// @param integer $col-num The column number to make
+// @param integer $max-cols The maximum number of columns in the grid row
+// @param string $prefix The prefix to add to each class
+// @param string $size The size constant to add to each class
+//
+@mixin make-column($col-num, $max-cols, $prefix, $size) {
+	$calculation: $col-num / $max-cols * 100%;
+
+	// outputs something like .col-xl-2
+	.#{$prefix}-#{$size}-#{$col-num} {
+		// if the string does NOT contain "-offset" we will set the width
+		// of the column; otherwise, we will set its left margin
+		@if str-index($size, "-offset") == null { 
+			width: $calculation;
+		}
+		@else {
+			margin-left: $calculation;
+		}
+
+		// we want to float columns and offsets regardless
+		float:left;
+	}
+}
+
+// Makes the column class definitions for a grid with the specified number of
+// columns as well as the size constant ("xl", "l", "m", "s", "xs").
+//
+// @param integer $max-cols The total number of columns to make
+// @param string $size The size constant to use for the columns
+//
+@mixin make-columns($max-cols, $size) {
+	@for $col from 1 through $max-cols {
+		@include make-column($col, $max-cols, "col", $size)
+		@include make-column($col, $max-cols, "col", "#{$size}-offset")
+	}
+}

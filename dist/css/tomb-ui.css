@@ -379,6 +379,31 @@ textarea {
 /* ------------------------------------- */
 /* Styles specific to Tomb UI begin here */
 /* ------------------------------------- */
+html {
+  font-size: 16px;
+  font-family: sans-serif; }
+
+h1 {
+  font-size: 2.5em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.75em; }
+
+h6 {
+  font-size: 0.5em; }
+
+p {
+  font-size: 16px; }
+
 /* Only display the marked content for a screen-reader */
 .sr-only {
   position: absolute;

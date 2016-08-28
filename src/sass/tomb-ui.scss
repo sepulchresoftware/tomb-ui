@@ -17,8 +17,10 @@ $version: "0.1.0";
 // Common files
 @import "common/variables";
 @import "common/colors";
+@import "common/fonts";
 @import "common/functions";
 @import "common/utilities";
+@import "common/grid";
 
 // Reusable components for Tomb UI
 @import "components/grid";
