@@ -1,6 +1,8 @@
 // UTILITIES
 
-/* Only display the marked content for a screen-reader */
+/*! Only display the marked content for a screen-reader */
+/*! Taken from the Metaphor UI Kit made by my buddy Alex Hernandez */
+/*! https://github.com/csun-metalab/metaphor */
 .sr-only {
 	position: absolute;
 	width: 1px;
